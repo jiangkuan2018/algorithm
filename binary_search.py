@@ -15,4 +15,4 @@ def binary_search(list, item):
   return None
 
 my_list = [1, 3, 5, 7, 9, 11, 13, 17, 21, 88]
-print binary_search(my_list, 3)
+print binary_search(my_list, 0)
