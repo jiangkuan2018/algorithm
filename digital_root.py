@@ -1,4 +1,4 @@
-# codeing=utf-8
+# coding=utf-8
 # 求递归求数字根
 def digital_root(n):
   str_n = str(n)
