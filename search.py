@@ -1,4 +1,4 @@
-# code=utf-8
+# coding=utf-8
 from collections import deque
 
 graph = {}
@@ -12,7 +12,7 @@ graph["thom"] = []
 graph["jonny"] = []
 
 def search(name):
-  search_queue = deque() #  创建队列
+  search_queue = deque() # 创建队列
   search_queue += graph[name] # 添加被检查者的所有一度关系
   searched = []  # 记录被检查过的元素
   path = []
