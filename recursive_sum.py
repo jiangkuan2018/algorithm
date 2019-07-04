@@ -10,6 +10,7 @@
 # print sum(arr)
 arr2 = [1, 3, 100, 11, 8]
 def find_biggest(arr):
+  biggest = 0
   biggest = arr[0] if arr[0] > biggest else biggest
   if len(arr) == 1:
    return arr

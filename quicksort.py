@@ -9,7 +9,6 @@ def quicksort(array):
 # print quicksort([10, 5, 2, 4])
 
 def multip(arr):
-  newArr = arr
   for i in range(len(arr)):
     print arr[i]
     # print newArr
