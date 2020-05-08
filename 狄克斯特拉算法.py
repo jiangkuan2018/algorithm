@@ -23,18 +23,26 @@ parents['fin'] = None
 
 processed = [] # 以处理过的节点
 
-def find_lowest_cost_node(costs): 
-  lowest_cost = float("inf") 
-  lowest_cost_node = None
-  for node in costs: 
+def find_lowest_cost_node(costs):
+  lowest_costs = float('inf')
+  lowest_costs_node = None
+  for node in costs:
     cost = costs[node]
-    if cost < lowest_cost and node not in processed:
-      lowest_cost = cost 
-      lowest_cost_node = node 
-  return lowest_cost_node
+    if cost < lowest_costs and node not in processed:
+      lowest_costs = cost # 花销
+      lowest_costs_node = node # 节点
+  return lowest_costs_node
 
 node = find_lowest_cost_node(costs)
+
 while node is not None:
-  cost = costs[node]
-  neighbors = graph[node]
-  print cost
+  cost = costs[node] # 当前最小花销
+  neighbors = graph[node] # 找到最小花销节点的下一级
+  for n in neighbors.keys():
+    new_cost = cost + neighbors[n]
+    if costs[n] > new_cost:
+      costs[n] = new_cost
+      parents[n] = node
+  processed.append(node)
+  node = find_lowest_cost_node(costs)
+  print(node)
