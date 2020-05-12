@@ -7,21 +7,16 @@ stations["kthree"] = set(["or", "nv", "ca"])
 stations["kfour"] = set(["nv", "ut"])
 stations["kfive"] = set(["ca", "az"])
 final_stations = set()
-best_station = None
-states_covered = set()
 
-# set1 = set(['eli','xiangjiao','xihongshi'])
-# set2 = set(['tiancai','huluobo','xihongshi'])
-# print set1 | set2
+while states_needed:
+  best_station = None
+  states_covered = set()
+  for station, states in stations.items():
+    covered = states_needed & states
+    if len(covered) > len(states_covered):
+      best_station = station
+      states_covered = covered
+  states_needed -= states_covered
+  final_stations.add(best_station)
 
-for station, states_for_station in stations.items():
-  #station是key
-  #states_for_station是值
-  # print station, states_for_station
-  covered = states_needed & states_for_station
-  if (len(covered) > len(states_covered)):
-    print covered
-    best_station = station
-    states_covered = covered
-
-print best_station
+print(final_stations)

@@ -18,6 +18,6 @@ function sum(...args: number[][]): number[] {
   }, [])
 }
 
-console.log(intersection([3, 4, 5], [4, 5, 6,], [5, 6, 7]))
-console.log(sum([3, 4, 5], [4, 5, 6,], [5, 6, 7]))
+console.log(intersection([3, 4, 5], [4, 5, 6], [5, 6, 7]))
+console.log(sum([3, 4, 5], [4, 5, 6], [5, 6, 7]))
 
