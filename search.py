@@ -28,7 +28,7 @@ def search(name):
         path = []
         search_queue += graph[person] # 如果检查者不是seller 添加检查者的所有一度关系
         searched.append(person)  # 将被检查者记录到数组中
-  print 'not found seller'
+  print('not found seller')
   return False # 如果都没有 返回false
 
 def person_is_seller(name): # 条件

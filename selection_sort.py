@@ -17,6 +17,4 @@ def selectionSort(arr):
   return newArr
 
 arr = [5, 4, 7, 99, 77, 231, 435, 656]
-# print arr.pop(2)
-# print arr
-print selectionSort(arr)
+print(selectionSort(arr))

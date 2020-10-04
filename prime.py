@@ -19,13 +19,13 @@ def isPrime(n):
     return False
 HRNUM = 707829217
 daixuan = []
-print sieve_of_eratosthenes(100)
+print(sieve_of_eratosthenes(100))
 def findPrime(arr):
   for num in arr:
     if isPrime(HRNUM / num):
       daixuan.append(num)
   
-  print daixuan
+  print(daixuan)
 
 
 findPrime(sieve_of_eratosthenes(100))
